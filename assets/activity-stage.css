@@ -1,0 +1,30 @@
+/* Actividades como escenario interactivo (10/11/2026, tarde). Sin JS se mantiene la cuadrícula. */
+.stage-ready{display:block!important}
+.stage-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 22px;padding:0;list-style:none}
+.stage-tabs button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:4px;width:100%;padding:14px 16px 16px;border:1px solid color-mix(in srgb,currentColor 28%,transparent);background:transparent;color:inherit;position:relative;overflow:hidden;transition:border-color .25s,background .25s,transform .25s}
+.stage-tabs button:hover{border-color:currentColor;transform:translateY(-2px)}
+.stage-tabs button:focus-visible{outline:3px solid #79613e;outline-offset:3px}
+.stage-tabs .st-n{font:28px/1 Georgia,serif;color:#a6875b;transition:color .25s}
+.stage-tabs .st-t{font-size:13px;line-height:1.35;color:inherit;opacity:.85}
+.stage-tabs button[aria-selected="true"]{background:#3c583d;border-color:#3c583d}
+.stage-tabs button[aria-selected="true"] .st-n{color:#e3c797}
+.stage-tabs button[aria-selected="true"] .st-t{color:#fff;opacity:1}
+.stage-tabs .st-bar{position:absolute;left:0;bottom:0;height:3px;width:100%;background:#e3c797;transform:scaleX(0);transform-origin:left}
+.stage-tabs button[aria-selected="true"] .st-bar.run{animation:st-fill var(--st-time,7s) linear forwards}
+@keyframes st-fill{to{transform:scaleX(1)}}
+.stage-ready .practice-card{display:none;position:relative;overflow:hidden;min-height:300px;padding:44px 48px;border-color:#c9d3bd}
+.stage-ready .practice-card.is-active{display:flex}
+.stage-ready .practice-card::after{content:attr(data-big);position:absolute;right:28px;bottom:-34px;font:200px/1 Georgia,serif;color:currentColor;opacity:.07;pointer-events:none}
+.stage-ready .practice-card .number{display:none}
+.stage-ready .practice-card h3{font-size:clamp(30px,4vw,44px)}
+.stage-ready .practice-card .description{font-size:18px;line-height:1.65;max-width:640px;margin:18px 0 28px}
+.stage-ready .practice-card.is-active>*{animation:st-in .6s cubic-bezier(.22,.8,.2,1) both}
+.stage-ready .practice-card.is-active>*:nth-child(2){animation-delay:.08s}
+.stage-ready .practice-card.is-active>*:nth-child(3){animation-delay:.16s}
+.stage-ready.go-back .practice-card.is-active>*{animation-name:st-in-back}
+@keyframes st-in{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+@keyframes st-in-back{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}
+.stage-hint{font-size:12px;color:#7a6d57;margin:14px 0 0;text-align:center}
+@media(max-width:700px){.stage-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.stage-ready .practice-card{padding:28px 22px;min-height:0}.stage-ready .practice-card::after{font-size:130px;right:12px;bottom:-22px}.stage-ready .practice-card .description{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.stage-ready .practice-card.is-active>*,.stage-tabs button[aria-selected="true"] .st-bar.run{animation:none}.stage-tabs button:hover{transform:none}}
+html.reduced-motion .stage-ready .practice-card.is-active>*{animation:none}

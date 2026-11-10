@@ -1,0 +1,77 @@
+.quiz-form fieldset {
+  display: grid;
+  gap: .6rem;
+  border: 0;
+  margin: 1rem 0;
+  padding: 0;
+  min-inline-size: 0;
+}
+.quiz-form .quiz-choice {
+  display: flex;
+  align-items: baseline;
+  gap: .7rem;
+  border: 1px solid #bcc9b5;
+  border-radius: 8px;
+  padding: .6rem .8rem;
+  min-height: 44px;
+  cursor: pointer;
+  background: #f9faf4;
+}
+.quiz-form .quiz-choice:has(input:checked) {
+  background: #e4eedf;
+  border-color: #526c49;
+}
+.quiz-form input[type="radio"] {
+  flex: none;
+  accent-color: #405b38;
+}
+.quiz-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  border: 1px solid #879982;
+  border-radius: 8px;
+  background: #fff;
+  padding: .75rem;
+  font: inherit;
+}
+.quiz-form button {
+  border: 0;
+  border-radius: 8px;
+  background: #3d5835;
+  color: #fff;
+  min-height: 44px;
+  padding: .65rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+.quiz-form :is(button, input, textarea):focus-visible {
+  outline: 3px solid #31522b;
+  outline-offset: 3px;
+}
+.quiz-form .quiz-status {
+  font-weight: 600;
+}
+.quiz-form .quiz-status:empty {
+  margin: 0;
+}
+.quiz-form .quiz-explanation {
+  border-left: 3px solid #526c49;
+  background: #eaf0e5;
+  padding: .5rem 1rem;
+}
+.quiz-form [hidden] {
+  display: none !important;
+}
+.quiz-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.quiz-options li[data-value="T"], .quiz-options li[data-value="F"] { list-style: none; }
+
+.material-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:16px;margin:24px 0}.material-card{display:flex;flex-direction:column;gap:14px;padding:24px;border:1px solid #c8bdab;border-radius:12px;background:#f8f7f1;color:#263622;text-decoration:none;transition:transform .2s,box-shadow .2s}.material-card span{font-size:12px;letter-spacing:.06em;text-transform:uppercase}.material-card strong{font-family:Georgia,serif;font-size:25px;line-height:1.2}.material-card small{font-size:14px;line-height:1.5}.material-card:hover,.material-card:focus-visible{transform:translateY(-4px);box-shadow:0 8px 20px #29392318}.material-note{font-size:14px}@media(prefers-reduced-motion:reduce){.material-card{transition:none}.material-card:hover,.material-card:focus-visible{transform:none}}

@@ -1,0 +1,16 @@
+/* The reading room: the same editorial language, with room for the evidence. */
+:root{--paper:#f1ebdf;--ink:#282820;--amber:#79613e;--line:#cec5b5}
+::selection{background:#ddc8a6;color:#222}
+header .brand{font:italic 38px Georgia,serif;letter-spacing:-2px;text-transform:lowercase}
+header .brand::after{content:'.'}
+header{padding-block:22px}.intro{padding-top:90px;padding-bottom:55px}
+h1{font-size:clamp(56px,8vw,100px);line-height:.97;letter-spacing:-.06em}.lead{font-size:18px;line-height:1.8;max-width:660px}.note{border-left:1px solid #b49b72;padding:8px 0 8px 18px;margin-top:26px;font-size:12px;line-height:1.9}
+.index{gap:5px 20px;padding:12px 0}.index a{padding:11px 0;min-height:44px;display:inline-flex;align-items:center;font-size:11px}.index a:hover{color:var(--amber)}
+.chapter{padding:78px 0;gap:48px}.chapter-no{font-size:90px;color:#ad9878;letter-spacing:-5px}.chapter-no span{letter-spacing:1.6px;font-size:9px}.deck{font-size:17px;line-height:1.85}.chapter dd{font-size:14px;line-height:1.95;max-width:680px}.chapter dt{margin-top:30px;font-size:9px;letter-spacing:1.6px}.actions{margin:30px 0}.action{font-size:11px;padding:14px 22px;min-height:46px;transition:color .2s,background .2s}.actions small{font-size:10px}.status{background:#e5dccb75;border-left-width:1px;font-size:11px;padding:12px 16px;line-height:1.8}
+.logros li{padding:23px 0;gap:22px}.logros strong{font-size:13px}.logros p{font-size:13px;line-height:1.85}.points{font-size:40px}.points small{font-size:8px;letter-spacing:1px}.logros{margin:30px 0}
+summary{padding:9px 0;font-size:13px;line-height:1.7}details p{font-size:13px;line-height:1.9;max-width:680px}details a{overflow-wrap:anywhere}footer{font-size:10px}
+@media(max-width:680px){.intro{padding:52px 0 35px}.lead{font-size:16px}.chapter{padding:45px 0;gap:22px}.chapter-no{font-size:46px;letter-spacing:-2px}.chapter-no span{letter-spacing:1px}.deck{font-size:16px}.index{gap:0 18px}.index a{font-size:11px}.chapter dd{font-size:13px}.chapter dt{margin-top:24px}.note{font-size:11px}h2{font-size:37px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{.intro{padding:0}.chapter{padding:24px 0}.chapter dd,details p{font-size:10pt}h1{font-size:34pt}}
+
+.requirement-map{border:1px solid var(--line);background:#e7ddca44;padding:24px;margin:30px 0}.requirement-map h3{font-size:28px}.requirement-map li{font-size:12px;line-height:1.9}.requirement-map strong{font-weight:600}.requirement-map ul{margin-bottom:0}
